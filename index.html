@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portofolio - Informatika Pink Aesthetic</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --bg-pink: #ffd0dd;
+            --card-pink: #fec2d6;
+            --accent-pink: #ff407d;
+            --dark-pink: #d8004e;
+            --cloud-white: #ffffff;
+            --text-color: #4a1525;
+            --soft-shadow: 0 10px 25px rgba(216, 0, 78, 0.12);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-pink);
+            color: var(--text-color);
+            line-height: 1.6;
+        }
+
+        /* Fun Playful Font Class */
+        .playful-font {
+            font-family: 'Fredoka', cursive;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: var(--cloud-white);
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.08);
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            background: rgba(255, 255, 255, 0.9);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-pink);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-pink);
+        }
+
+        .btn-hire {
+            background-color: var(--accent-pink);
+            color: white;
+            padding: 8px 22px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 700;
+            box-shadow: 0 4px 10px rgba(255, 64, 125, 0.3);
+            transition: 0.3s;
+        }
+
+        .btn-hire:hover {
+            background-color: var(--dark-pink);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background-color: var(--bg-pink);
+            padding: 60px 40px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero h1 {
+            font-size: 4.5rem;
+            color: var(--dark-pink);
+            line-height: 1;
+            margin-bottom: 10px;
+            text-shadow: 3px 3px 0px var(--cloud-white);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-color);
+            max-width: 600px;
+            margin: 0 auto 25px;
+            font-weight: 600;
+        }
+
+        .profile-img-box {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 6px solid white;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            box-shadow: var(--soft-shadow);
+        }
+
+        .profile-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Cloud Decoration */
+        .cloud-dec {
+            background: white;
+            border-radius: 50px;
+            display: inline-block;
+            padding: 5px 20px;
+            position: absolute;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        /* About Section */
+        .section {
+            padding: 60px 40px;
+        }
+
+        .section-title {
+            font-size: 2.8rem;
+            color: var(--dark-pink);
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .about-card {
+            background-color: #fff5f8;
+            border-radius: 24px;
+            padding: 30px;
+            border: 2px dashed var(--accent-pink);
+            margin-bottom: 30px;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .info-box {
+            background: white;
+            padding: 15px;
+            border-radius: 16px;
+            text-align: center;
+            box-shadow: var(--soft-shadow);
+        }
+
+        .info-box i {
+            font-size: 1.5rem;
+            color: var(--accent-pink);
+            margin-bottom: 5px;
+        }
+
+        .info-box h4 {
+            color: var(--dark-pink);
+            font-size: 0.9rem;
+        }
+
+        .info-box p {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            background-color: var(--accent-pink);
+            color: white;
+            display: flex;
+            justify-content: space-around;
+            padding: 25px 20px;
+            border-radius: 20px;
+            margin: 30px 0;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+        }
+
+        /* What I Can Do Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: var(--card-pink);
+            padding: 25px;
+            border-radius: 20px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .skill-icon {
+            width: 60px;
+            height: 60px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.8rem;
+            color: var(--dark-pink);
+        }
+
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .tag {
+            background: white;
+            color: var(--dark-pink);
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        /* Achievement Section */
+        .achievement-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .achievement-card {
+            background: white;
+            border-left: 6px solid var(--accent-pink);
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: var(--soft-shadow);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .achievement-info h3 {
+            color: var(--dark-pink);
+        }
+
+        .achievement-badge {
+            background: var(--bg-pink);
+            color: var(--dark-pink);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 0.85rem;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: var(--bg-pink);
+            text-align: center;
+            border-radius: 30px 30px 0 0;
+            padding: 60px 40px;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+
+        .btn-contact {
+            background: white;
+            color: var(--dark-pink);
+            padding: 12px 25px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: var(--soft-shadow);
+            transition: 0.3s;
+        }
+
+        .btn-contact:hover {
+            background: var(--accent-pink);
+            color: white;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            font-size: 0.85rem;
+            color: var(--text-color);
+            background: var(--bg-pink);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            nav {
+                padding: 15px 20px;
+            }
+            .nav-links {
+                display: none; /* Can be expanded for mobile menu */
+            }
+            .hero h1 {
+                font-size: 3rem;
+            }
+            .section {
+                padding: 40px 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Navigation -->
+        <nav>
+            <div class="playful-font" style="font-size: 1.5rem; font-weight: 700; color: var(--dark-pink);">
+                Portofolio.
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">What I Can Do</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn-hire">Hire Me</a>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="profile-img-box">
+                <img src="profil.jpg" alt="Foto Profil">
+            </div>
+            <h1 class="playful-font">Hello!</h1>
+            <p>Saya Mahasiswa Baru Sistem Informasi yang siap mengembangkan skill software & digital solutions.</p>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="section">
+            <h2 class="section-title playful-font">about me.</h2>
+            
+            <div class="about-card">
+                <p style="text-align: center; margin-bottom: 20px;">
+                    Halo! Saya adalah mahasiswa program studi Sistem Informasi. Memiliki ketertarikan besar dalam bidang pembuatan web, pemecahan masalah algoritma, dan eksplorasi teknologi baru.
+                </p>
+
+                <!-- Data Diri Sesuai Guidebook -->
+                <div class="info-grid">
+                    <div class="info-box">
+                        <i class="fa-solid fa-user"></i>
+                        <h4>NAMA</h4>
+                        <p>CHRISTINE LOVYNIA APRILIA PUTRI</p>
+                    </div>
+                    <div class="info-box">
+                        <i class="fa-solid fa-id-card"></i>
+                        <h4>NIM</h4>
+                        <p>26051214202</p>
+                    </div>
+                    <div class="info-box">
+                        <i class="fa-solid fa-graduation-cap"></i>
+                        <h4>PRODI</h4>
+                        <p>Sistem Informasi</p>
+                    </div>
+                    <div class="info-box">
+                        <i class="fa-solid fa-laptop-code"></i>
+                        <h4>AKTIVITAS</h4>
+                        <p>Mahasiswa</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Statistik Singkat -->
+            <div class="stats-bar playful-font">
+                <div class="stat-item">
+                    <h3>2+</h3>
+                    <p>Mini Projects</p>
+                </div>
+                <div class="stat-item">
+                    <h3>10+</h3>
+                    <p>Certificates</p>
+                </div>
+                <div class="stat-item">
+                    <h3>2029</h3>
+                    <p>Target Graduation</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- What I Can Do Section -->
+        <section id="skills" class="section" style="background-color: #fff9fb;">
+            <h2 class="section-title playful-font">what I can do.</h2>
+            
+            <div class="skills-grid">
+                <!-- Skill 1 -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="playful-font" style="color: var(--dark-pink);">Web Development</h3>
+                    <p style="font-size: 0.9rem; margin-top: 8px;">Membangun tampilan website responsif dan menarik menggunakan teknologi web standar.</p>
+                    <div class="tags">
+                        <span class="tag">HTML5</span>
+                        <span class="tag">CSS3</span>
+                        <span class="tag">JavaScript</span>
+                    </div>
+                </div>
+
+                <!-- Skill 2 -->
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="playful-font" style="color: var(--dark-pink);">Tools & Workflow</h3>
+                    <p style="font-size: 0.9rem; margin-top: 8px;">Terbiasa menggunakan tools pendukung pengembangan perangkat lunak.</p>
+                    <div class="tags">
+                        <span class="tag">Git & GitHub</span>
+                        <span class="tag">VS Code</span>
+                        <span class="tag">Figma</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Achievement Section -->
+        <section id="achievements" class="section">
+            <h2 class="section-title playful-font">achievements.</h2>
+            
+            <div class="achievement-list">
+                <!-- Item Prestasi 1 -->
+                <div class="achievement-card">
+                    <div class="achievement-info">
+                        <h3>Juara 1 Kegiatan Festival dan Lomba Seni Siswa Nasional (FLS2N) Jenjang SMA/MA Tingkat Provinsi Jawa Timur</h3>
+                        <p style="font-size: 0.85rem; color: #666;">Penyelenggara: Pusat Prestasi Nasional | Tahun: 2024</p>
+                        <p style="font-size: 0.9rem; margin-top: 5px;">Membuat karya berupa Artikel Feature.</p>
+                    </div>
+                    <a href="J1 FLS2N.jpg" target="_blank" class="achievement-badge" style="text-decoration: none;">
+    <i class="fa-solid fa-file-pdf"></i> Lihat Sertifikat
+</a>
+                </div>
+
+                <!-- Item Prestasi 2 -->
+                <div class="achievement-card">
+                    <div class="achievement-info">
+                        <h3>Juara 2 Bidang Lomba Jurnalistik Festival & Lomba Seni Siswa Nasional (FLS2N) SMA Tingkat Kota Surabaya</h3>
+                        <p style="font-size: 0.85rem; color: #666;">Penyelenggara: Pusat Prestasi Nasional | Tahun: 2024</p>
+                        <p style="font-size: 0.9rem; margin-top: 5px;"> Membuat karya berupa Artikel Feature.</p>
+                    </div>
+                    <a href="J2 FL2N.jpg" target="_blank" class="achievement-badge" style="text-decoration: none;">
+    <i class="fa-solid fa-file-pdf"></i> Lihat Sertifikat
+</a>
+                </div>
+                <!-- Item Prestasi 3 -->
+                <div class="achievement-card">
+                    <div class="achievement-info">
+                        <h3>Peringkat 1 Ajang Raih Medali Prestasi Palang Merah Remaja (ARMARPAJA) tingkat PMR Wira se-Kota Surabaya</h3>
+                        <p style="font-size: 0.85rem; color: #666;">Penyelenggara: Pemerintah Kota Surabaya | Tahun: 2024</p>
+                        <p style="font-size: 0.9rem; margin-top: 5px;">Mengikuti serangkaian kepemimpinan seputar Palang Merah Remaja.</p>
+                    </div>
+                    <a href="PMR.jpg" target="_blank" class="achievement-badge" style="text-decoration: none;">
+    <i class="fa-solid fa-file-pdf"></i> Lihat Sertifikat
+</a>
+                </div>
+                <!-- Item Prestasi 4 -->
+                <div class="achievement-card">
+                    <div class="achievement-info">
+                        <h3>Juara 3 Duta Trantibum Satpol PP Goes to School Kota Surabaya</h3>
+                        <p style="font-size: 0.85rem; color: #666;">Penyelenggara: Pemerintah Kota Surabaya | Tahun: 2024</p>
+                        <p style="font-size: 0.9rem; margin-top: 5px;">Mengikuti serangkaian Tata Tertib yang mencerminkan siswa siswi Kota Surabaya.</p>
+                    </div>
+                    <a href="DUTA TR.jpeg" target="_blank" class="achievement-badge" style="text-decoration: none;">
+    <i class="fa-solid fa-file-pdf"></i> Lihat Sertifikat
+</a>
+                </div>
+                <!-- Item Prestasi 5 -->
+                <div class="achievement-card">
+                    <div class="achievement-info">
+                        <h3>Juara 1 Konten Kreatif Pekan Qris Nasional</h3>
+                        <p style="font-size: 0.85rem; color: #666;">Penyelenggara: Bank Indonesia | Tahun: 2025</p>
+                        <p style="font-size: 0.9rem; margin-top: 5px;">Membuat video kreatif seputar pembayaran QRIS.</p>
+                    </div>
+                    <a href="KONTEN.jpeg" target="_blank" class="achievement-badge" style="text-decoration: none;">
+    <i class="fa-solid fa-file-pdf"></i> Lihat Sertifikat
+</a>
+                </div>
+                <!-- Item Prestasi 6 -->
+                <div class="achievement-card">
+                    <div class="achievement-info">
+                        <h3>Top 15 bidang Kimia SMA King Expert Science Competition (KESC) tingkat nasional</h3>
+                        <p style="font-size: 0.85rem; color: #666;">Penyelenggara: PT Expert Indonesia | Tahun: 2025</p>
+                        <p style="font-size: 0.9rem; margin-top: 5px;">Olimpiade Bidang Kimia.</p>
+                    </div>
+                    <a href="ORBIT.jpeg" target="_blank" class="achievement-badge" style="text-decoration: none;">
+    <i class="fa-solid fa-file-pdf"></i> Lihat Sertifikat
+</a>
+                </div>
+                <!-- Item Prestasi 7 -->
+                <div class="achievement-card">
+                    <div class="achievement-info">
+                        <h3>JUARA 3 Airlangga Statistics Olympiad</h3>
+                        <p style="font-size: 0.85rem; color: #666;">Penyelenggara: Universitas Airlangga | Tahun: 2025</p>
+                        <p style="font-size: 0.9rem; margin-top: 5px;">Olimpiade Statistika.</p>
+                    </div>
+                    <a href="ASO.jpeg" target="_blank" class="achievement-badge" style="text-decoration: none;">
+    <i class="fa-solid fa-file-pdf"></i> Lihat Sertifikat
+</a>
+                </div>
+                <!-- Item Prestasi 8 -->
+                <div class="achievement-card">
+                    <div class="achievement-info">
+                        <h3>Siswa Tersertifikasi Gemini - Universitas</h3>
+                        <p style="font-size: 0.85rem; color: #666;">Penyelenggara: Google For Education | Tahun: 2026</p>
+                        <p style="font-size: 0.9rem; margin-top: 5px;">Mengikuti Webinar mengenai Google Gemini dan mengerjakan TEST untuk menguji tingkat kepahaman tentang materi yang sudah dijelaskan.</p>
+                    </div>
+                    <a href="GEMINI.jpg" target="_blank" class="achievement-badge" style="text-decoration: none;">
+    <i class="fa-solid fa-file-pdf"></i> Lihat Sertifikat
+</a>
+                </div>
+                <!-- Item Prestasi 9 -->
+                <div class="achievement-card">
+                    <div class="achievement-info">
+                        <h3>Financial Literacy and Soft Skill</h3>
+                        <p style="font-size: 0.85rem; color: #666;">Penyelenggara: DBS Bank | Tahun: 2026</p>
+                        <p style="font-size: 0.9rem; margin-top: 5px;">Mengerjakan Kuis Seputar Literasi Keuangan.</p>
+                    </div>
+                    <a href="DBS.jpg" target="_blank" class="achievement-badge" style="text-decoration: none;">
+    <i class="fa-solid fa-file-pdf"></i> Lihat Sertifikat
+</a>
+                </div>
+                <!-- Item Prestasi 10 -->
+                <div class="achievement-card">
+                    <div class="achievement-info">
+                        <h3>Al and Automation with n8n</h3>
+                        <p style="font-size: 0.85rem; color: #666;">Penyelenggara: PT LINIMUDA INSPIRASI NEGERI | Tahun: 2026</p>
+                        <p style="font-size: 0.9rem; margin-top: 5px;">Mengikuti webinar dan mengerjakan tugas yang diberikan seputar Al and Automation with n8n.</p>
+                    </div>
+                    <a href="MY SKILL.jpeg" target="_blank" class="achievement-badge" style="text-decoration: none;">
+    <i class="fa-solid fa-file-pdf"></i> Lihat Sertifikat
+</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title playful-font" style="margin-bottom: 10px;">get in touch!</h2>
+            <p style="font-weight: 600;">Tertarik untuk berkolaborasi atau ingin menyapa? Hubungi saya melalui:</p>
+
+            <div class="contact-links">
+                <a href="mailto:christinelovynia@gmail.com" class="btn-contact">
+                    <i class="fa-solid fa-envelope"></i> Email
+                </a>
+                <a href="https://github.com/christinelovynia15" target="_blank" class="btn-contact">
+                    <i class="fa-brands fa-github"></i> GitHub
+                </a>
+                <a href="https://linkedin.com/in/christinelovynia" target="_blank" class="btn-contact">
+                    <i class="fa-brands fa-linkedin"></i> LinkedIn
+                </a>
+                <a href="CV - CHRISTINE LOVYNIA APRILIA PUTRI.pdf" download class="btn-contact">
+                    <i class="fa-solid fa-file-pdf"></i> CV
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Christine Lovynia Aprilia Putri. All rights reserved. | Sistem Informasi</p>
+        </footer>
+    </div>
+
+</body>
+</html>
